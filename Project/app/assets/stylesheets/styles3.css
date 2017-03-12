@@ -1,0 +1,420 @@
+		.desc-unit {
+		min-height: 180px;
+	}
+	
+	.navbar-side ul {
+		padding-left: 0;
+		list-style: none;
+	}
+	
+	.navbar-side li {
+		padding: 8px;
+	}
+	
+
+    .navbar-brand {
+	font-size:1.8em;	
+	}
+	
+	#topContainer {
+	height:300px;
+	width:90%;
+	background-size:cover;
+	}
+	
+	#topRow {
+	margin-top:100px;
+	text-align:centre;
+	}
+	
+	#topRow h1 {
+	font-size:300%;
+	}
+	
+	#emailSignup {
+	margin-top:50px;
+	}
+	
+	.bold {
+	
+	font-weight:bold;
+	}
+	.marginTop {
+	margin-top:30px;
+	
+	}
+	.center {
+	text-align:center;
+	}
+	
+	.dropdown {
+    position: relative;
+    display: inline-block;
+    }
+    .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+	
+	.title {
+	margin-top:100px;
+	font-size:300%;
+	}
+		
+	.marginBottom {
+	margin-bottom:50px;
+	}
+	
+	#footer {
+	background-color:black;
+	position:relative;
+	bottom:0;
+	left:0;
+	right:0;
+	}
+	
+
+	.desc-unit p {
+		min-height: 50px;
+	}
+	
+	
+	
+	body,html{
+    height: 100%;
+  }
+
+  nav.sidebar, .main{
+    -webkit-transition: margin 200ms ease-out;
+      -moz-transition: margin 200ms ease-out;
+      -o-transition: margin 200ms ease-out;
+      transition: margin 200ms ease-out;
+  }
+
+  .main{
+    padding: 10px 10px 0 10px;
+  }
+
+ @media (min-width: 765px) {
+
+    .main{
+      position: absolute;
+      width: calc(100% - 40px); 
+      margin-left: 40px;
+      float: right;
+    }
+
+    nav.sidebar:hover + .main{
+      margin-left: 200px;
+    }
+
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+      margin-left: 0px;
+    }
+
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+      text-align: center;
+      width: 100%;
+      margin-left: 0px;
+    }
+    
+    nav.sidebar a{
+      padding-right: 13px;
+    }
+
+    nav.sidebar .navbar-nav > li:first-child{
+      border-top: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav > li{
+      border-bottom: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+      padding: 0 0px 0 0px;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+      color: #777;
+    }
+
+    nav.sidebar{
+      width: 200px;
+      height: 100%;
+      margin-left: -160px;
+      float: left;
+      margin-bottom: 0px;
+    }
+
+    nav.sidebar li {
+      width: 100%;
+    }
+
+    nav.sidebar:hover{
+      margin-left: 0px;
+    }
+
+    .forAnimate{
+      opacity: 0;
+    }
+  }
+   
+  @media (min-width: 1330px) {
+
+    .main{
+      width: calc(100% - 200px);
+      margin-left: 200px;
+    }
+
+    nav.sidebar{
+      margin-left: 0px;
+      float: left;
+    }
+
+    nav.sidebar .forAnimate{
+      opacity: 1;
+    }
+  
+
+  nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #CCC;
+    background-color: transparent;
+  }
+
+  nav:hover .forAnimate{
+    opacity: 1;
+  }
+  section{
+    padding-left: 15px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+	
+	
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown1:hover .dropdown-content1 {
+	display: block;
+}
+
+
+
+
+.footer1{
+ color: white;
+}
+
+.footer2{
+	color: white
+}
+
+
+
+
+
+
+
+section {
+    padding: 5% 0;
+	 padding-left: 5cm;
+}
+
+.alizarin {
+    background: #e74c3c;
+}
+
+/*.amethyst {
+    background: #9b59b6;
+}
+
+.emerald {
+    background: #2ecc71;
+}
+
+.midnight-blue {
+    background: #2c3e50;
+}
+
+.peter-river {
+    background: #3498db;
+}*/
+
+.dl {
+    background: #f0f0f0;
+    padding: 30px 0;
+    border-radius: 20px;
+    position: center;
+}
+
+.dl:before {
+    content: " ";
+    height: 20px;
+    width: 20px;
+    background: #ddd;
+    border-radius: 20px;
+    position: center;
+    left: 50%;
+    top: 20px;
+    margin-left: -10px;
+}
+    
+.dl .brand {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    text-align: center;
+    min-height: 100px; 
+}
+
+.dl .discount {
+    min-height: 50px;
+    position: relative;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-weight: bold;
+
+    padding: 20px 15px 0;
+    color: #f1c40f;
+}
+
+.dl .discount:after {
+    content: " ";
+    
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 20%;
+}
+
+.dl .discount.alizarin:after {
+    border-top: 20px solid #e74c3c;
+}
+
+/*.dl .discount.peter-river:after {
+    border-top: 20px solid #3498db;
+}
+
+.dl .discount.emerald:after {
+    border-top: 20px solid #2ecc71;
+}
+
+.dl .discount.amethyst:after {
+    border-top: 20px solid #9b59b6; 
+}
+*/
+.dl .discount .type {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: -30px;
+}
+
+.dl .descr {
+    color: #999;
+    margin-top: 10px;
+    padding: 20px 15px; 
+}
+ 
+.dl .ends {
+    padding: 0 15px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.dl .coupon {
+    min-height: 50px;
+    text-align: center;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 15px;
+}
+
+.dl .coupon a.open-code {
+    color: #16a085;
+}
+
+.dl .coupon .code {
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #f1c40f;
+    background: #f0f0f0;
+}
+    
+	
+	
+	.dl .coco1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    text-align: center;
+    min-height: 100px; 
+	background-color: brown;
+}

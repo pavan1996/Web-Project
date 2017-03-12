@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap 101 Template</title>
+
+
+	<title>Project</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="styles/link.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+	<link href="css/bootstrap.min.css" rel="stylesheet">    
+	<link href="css/style_carousel.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles2/styles2.css">
+	<script type="text/javascript" src="js/link.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">-->
+	
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> <script src="../%pathtofile%/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+	<script>
+
+		$(".contentContainer").css("min.height",$(window).height());
+	</script>
+
+	<script> 
+		$('#myCarousel').carousel({ interval: 3000 }) 
+	</script>
+
+	<div class="navbar navbar-inverse navbar-fixed=top">
+
+		<div class="container  heights">
+
+			<div class="navbar-header">	
+
+				<button class="navbar-toggle" data-toggle="collapse"  data-target=".navbar-collapse">
+					<span class="icon-bar"></span>  
+					<span class="icon-bar"></span>  
+					<span class="icon-bar"></span>  
+				</button>
+				<a class="navbar-brand active" href="#book"><h2>BOOKSCART </h2> </a>
+
+			</div>
+
+			<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav">
+					<li><a href="#" class="height_for_header"><h4>Header</h4> </a>
+						<ul>
+							<% met.each do |category| %>
+        					<li><a href=""><%= category.branch %></a>
+								<ul>
+									<% meth.each do |subject| %>
+										<li><a href="/books/<%= subject.id %>"><%= subject.subject_name if subject.category_id == category.id %></a></li>
+									<% end %>
+								</ul>
+							</li>
+  							<%end%>
+						</ul>
+					</li>	
+					<li><a href="download">Notes</a></li>
+
+
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group pull-left">		
+						<input type="search"  class="form-control">
+						
+						<button>
+							<a href="http://www.w3schools.com/" >
+								<img src="search-icon-png-20.png" style="width:25px;height:25px;" >
+							</a>
+						</button>
+					</div>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+					&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+					<% if user_signed_in? %>
+						<%= link_to "Log Out", destroy_user_session_path , method: :delete %>
+					&ensp;&ensp;&ensp;
+					<% else %>
+						<%= link_to "Sign In", new_user_session_path %>
+						<%= link_to "Sign Up", new_user_registration_path %>
+						&ensp;&ensp;&ensp;&ensp;
+					<% end %>
+					<%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+					<a href="https://www.amazon.in/gp/cart/view.html/ref=nav_cart">
+						<img src="Blue-cart-PN.png" style="width:35px;height:35px;">
+					</a>		
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<p class="notice"><%= notice %></p>
+	
+	<h4 class="alert color_for_alert" align="center" ><%= alert %></h4>
+	<%= yield %>
+
+	
+
+</body>
+
+
+
+

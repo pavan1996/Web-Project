@@ -1,0 +1,15 @@
+<% if !current_user.nil? %>
+	<% if current_user.admin? %>
+		<h1>Editing User</h1>
+		<%= render 'form' %>
+	<% elsif current_user.id == @note.user_id %>
+		<h1>Editing User</h1>
+		<%= render 'form' %>
+	<% else %>
+		<h1>This is a restricted page</h1>
+	<% end %>
+<% else %>
+	<h1>This is a restricted page</h1>
+<% end %>
+
+

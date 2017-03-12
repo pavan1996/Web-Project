@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recent Books</h1>
+<div class="wrapper">
+    <div class="minimum_size inner1" >
+        <% @books.each do |book| %>
+            <a href="/books/<%=book.id%>"">
+              <div class=" col-lg-3 item height_class">
+                <br>
+                <%= image_tag(book.cover.url,height:100,width:100) if book.cover %>
+                <h3><%= book.name %><br></h3> 
+                Author : <%= book.author %><br>
+            Publiisher : <%= book.publisher %>
+            <form action="https://en.wikipedia.org/wiki/Anno_Domini" style="position: absolute; align-items: center; bottom: 0;">
+                <input type="submit" value="Contact" class="btn btn-success marginTop" />
+            </form>
+
+              </div>
+            </a>
+          
+        <% end %>
+    </div>
+
+    <br>
+    <br>
+    <div class="inner2">
+        <h1>Recent Notes </h1>
+        <div class="minimum_size" >
+            <% @notes.each do |note| %>
+                <a href="/notes/<%=note.id%>"">
+                  <div class=" col-lg-3 item height_class">
+                    <br>
+                    <a href="<%= note.file.url%>">pdf</a>
+                    <h3><%= note.name %><br></h3> 
+                <form action="https://en.wikipedia.org/wiki/Anno_Domini" style="position: absolute; align-items: center; bottom: 0;">
+                    <input type="submit" value="Contact" class="btn btn-success marginTop" />
+                </form>
+
+                  </div>
+                </a>
+              
+            <% end %>
+        </div>
+    </div>
+    
+</div>
+
