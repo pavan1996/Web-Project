@@ -1,0 +1,45 @@
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Notes</h1>
+
+  <div id="containers">
+    <div id="left-columns">
+
+    </div>
+
+
+    <div id="right-columns">
+    <div class="minimum_size" >
+        <% @notes.each do |note| %>
+        <a href="/notes/<%=note.id%>"">
+          <div class=" col-lg-3 item height_class">
+            <br>
+            <b>
+              <h3><%= note.name %><br></h3> 
+              <% @categories.each do |category| %>
+                    <% if category.id == note.category_id %>
+                        Categories : <%= category.branch %>        
+                    <% end %>
+              <%end%>
+              <% @subjects.each do |subject| %>
+                    <% if subject.id == note.subject_id %>
+                        Categories : <%= subject.subject_name %>        
+                    <% end %>
+              <%end%>
+              <a href="<%= note.file.url %> " class="btn btn-default">pdf</a>
+            </b>
+            
+            <form action="https://en.wikipedia.org/wiki/Anno_Domini" style="position: absolute; align-items: center; bottom: 0;">
+              <input type="submit" value="Contact" class="btn btn-success marginTop" />
+            </form>
+
+          </div>
+        </a>
+
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+
+  <%= link_to 'New Note', new_note_path %>

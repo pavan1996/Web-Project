@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+
+<div id="containers">
+  <div id="left-columns">
+
+  </div>
+
+
+  <div id="right-columns">
+    <div class="minimum_size" >
+      <% @books.each do |book| %>
+      <a href="/books/<%=book.id%>"">
+        <div class=" col-lg-3 item height_class">
+          <br>
+          <%= image_tag(book.cover.url,height:150,width:150) if book.cover %>
+          <h3><%= book.name %><br></h3> 
+          Author : <%= book.author %><br>
+          Publiisher : <%= book.publisher %>
+          <form action="https://en.wikipedia.org/wiki/Anno_Domini" style="position: absolute; align-items: center; bottom: 0;">
+            <input type="submit" value="Contact" class="btn btn-success marginTop" />
+          </form>
+
+        </div>
+      </a>
+
+      <% end %>
+    </div>
+  </div>
+
+</div>
+<%= link_to 'New Book', new_book_path %>

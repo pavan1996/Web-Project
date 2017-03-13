@@ -1,0 +1,17 @@
+<% if !current_user.nil? %>
+	<% if current_user.admin? %>
+		<%= render 'form' %>
+		<%= link_to 'Show', @book %> |
+		<%= link_to 'Back', books_path %>
+	<% elsif current_user.id == @book.user_id %>
+		<%= render 'form' %>
+		<%= link_to 'Show', @book %> |	
+		<%= link_to 'Back', books_path %>
+	<% else %>
+		<h1>You can't access this Web page</h1>
+	<% end %>
+<% else %>
+	<h1>You can't access this Web page</h1>
+<% end %>
+
+
